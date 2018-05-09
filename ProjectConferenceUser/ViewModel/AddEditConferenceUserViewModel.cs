@@ -20,10 +20,11 @@ namespace ProjectConferenceUser.ViewModel
         public string Email { get; set; }
         [Required]
         [DataType(DataType.Password)]
+        [StringLength(30, MinimumLength = 6)]
         public string Password { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Password and Confirmation Password must match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password")]
         [Display(Name = "Confirm password")]
         public string ConfirmPassword { get; set; }
         [Required]
