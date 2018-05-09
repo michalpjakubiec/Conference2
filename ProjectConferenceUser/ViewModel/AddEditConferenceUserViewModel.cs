@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ProjectConferenceUser.ViewModel
@@ -15,10 +14,20 @@ namespace ProjectConferenceUser.ViewModel
         [Required]
         public string Name { get; set; }
         [Required]
+        [Display(Name = "Last name")]
         public string LastName { get; set; }
         [Required]
         public string Email { get; set; }
         [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Password and Confirmation Password must match.")]
+        [Display(Name = "Confirm password")]
+        public string ConfirmPassword { get; set; }
+        [Required]
+        [Display(Name = "Conference type")]
         public eConferenceType? ConferenceType { get; set; }
         [Required]
         [DisplayName("City")]

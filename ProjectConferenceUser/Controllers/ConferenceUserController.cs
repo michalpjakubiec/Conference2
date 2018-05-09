@@ -48,6 +48,7 @@ namespace ProjectConferenceUser.Controllers
                 Name = conferenceUser.Name,
                 LastName = conferenceUser.LastName,
                 Email = conferenceUser.Email,
+                Password = conferenceUser.Password,
                 ConferenceType = conferenceUser.ConferenceType,
                 City = _conferenceUser.GetCity(conferenceUser.CityId)
             };
@@ -66,6 +67,7 @@ namespace ProjectConferenceUser.Controllers
                 Name = conferenceUser.Name,
                 LastName = conferenceUser.LastName,
                 Email = conferenceUser.Email,
+                Password = conferenceUser.Password,
                 ConferenceType = conferenceUser.ConferenceType,
                 CityId = conferenceUser.City.Id.ToString()
             };
@@ -82,6 +84,7 @@ namespace ProjectConferenceUser.Controllers
                 Name = conferenceUser.Name,
                 LastName = conferenceUser.LastName,
                 Email = conferenceUser.Email,
+                Password = conferenceUser.Password,
                 ConferenceType = conferenceUser.ConferenceType,
                 City = _conferenceUser.GetCity(conferenceUser.CityId)
             };
