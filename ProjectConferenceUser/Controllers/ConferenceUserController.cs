@@ -53,8 +53,8 @@ namespace ProjectConferenceUser.Controllers
                 City = _conferenceUser.GetCity(conferenceUser.CityId)
             };
             _conferenceUser.Add(user);
-            return RedirectToAction("Index");
 
+            return RedirectToAction("Index");
         }
 
         // GET: ConferenceUser/Edit/5
